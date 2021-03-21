@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css"
+        integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <header class="head">
+        <div class="navbar navbar-dark bg-dark px-4 py-1">
+            <div class="col-6">
+                <h3>CRIPTO-ARITMÉTICA</h4>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-end">
+                <!-- Button trigger modal -->
+                <button class="btn btn-warning btn-sm mr-3" onclick="location.reload()">Reset</button>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+                    Integrantes
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"> <strong>ANÁLISIS DE ALGORITMOS</strong>
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h4><strong>Elaborado por: </strong></h3>
+                                    <ul>
+                                        <li>
+                                            <h5>Kevin Catucuamba</h5>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <i>Proyecto Cripto-Aritmético 2020-12-11</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-3">
+        <div class="row d-flex justify-content-center">
+            <div class="col col-md-5">
+
+                <form id="form">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            CRIPTOARIMÉTICA
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="">Inserte el primer sumando:</label>
+                                <input type="text" name="" id="txt-add1" class="form-control" placeholder="Ex: ABCD"
+                                    aria-describedby="helpId" pattern="^[A-Za-z]+$" title="Error de la entrada"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Inserte el segundo sumando:</label>
+                                <input type="text" name="" id="txt-add2" class="form-control" placeholder="Ex: XCD"
+                                    aria-describedby="helpId" pattern="^[A-Za-z]+$" title="Error de la entrada"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Inserte el resultado de la suma:</label>
+                                <input type="text" name="" id="txt-summation" class="form-control" placeholder="Ex: XCD"
+                                    aria-describedby="helpId" pattern="^[A-Za-z]+$" title="Error de la entrada"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button id="btn-calculate" class="btn btn-danger btn-block">Calcular</button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+
+            </div>
+            <div id="table-result" class="col col-md-7">
+                <h5 class="text-center mt-4">Aquí se mostrarán los resultados</h5>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="solutionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><strong id="nums">SOLUCIÓN</strong>
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div id="modal-body" class="modal-body">
+                        <div class="row">
+                            <div id="chars" class="col-3">
+
+                            </div>
+                            <div id="solution" class="col-9 mt-3">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <i>Proyecto Cripto-Aritmético 2020-12-11</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+            integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+            integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+            crossorigin="anonymous"></script>
+        <script src="./auxiliary.js"></script>
+        <script src="./controller.js" type="module"></script>
+</body>
+
+</html>
